@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class ProjectBoard extends Component {
     render() {
@@ -6,7 +7,7 @@ class ProjectBoard extends Component {
             <div>
                 <div className="container">
                     <a href="/ProjectTaskForm.html" className="btn btn-primary mb-3">
-                        <i className="fas fa-plus-circle"> Create Project Task</i>
+                        <div><FontAwesomeIcon icon="plus" /> Create Project Task</div>
                     </a>
                     <br/>
                     <hr/>
@@ -15,7 +16,7 @@ class ProjectBoard extends Component {
                             <div className="col-md-4">
                                 <div className="card text-center mb-2">
                                     <div className="card-header bg-secondary text-white">
-                                        <h3>TO DO</h3>
+                                        <h4 className="mb-0">TO DO</h4>
                                     </div>
                                 </div>
                                 <div className="card mb-1 bg-light">
@@ -40,14 +41,14 @@ class ProjectBoard extends Component {
                             <div className="col-md-4">
                                 <div className="card text-center mb-2">
                                     <div className="card-header bg-primary text-white">
-                                        <h3>In Progress</h3>
+                                        <h4 className="mb-0">In Progress</h4>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-4">
                                 <div className="card text-center mb-2">
                                     <div className="card-header bg-success text-white">
-                                        <h3>Done</h3>
+                                        <h4 className="mb-0">Done</h4>
                                     </div>
                                 </div>
                             </div>
