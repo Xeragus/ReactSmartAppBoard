@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom';
+import AppTaskItem from "./AppTask/AppTaskItem";
 
 class ProjectBoard extends Component {
     render() {
         return (
             <div>
                 <div className="container">
-                    <a href="/ProjectTaskForm.html" className="btn btn-primary mb-3">
+                    <Link to="/task/add" className="btn btn-primary mb-3">
                         <div><FontAwesomeIcon icon="plus" /> Create Project Task</div>
-                    </a>
+                    </Link>
                     <br/>
                     <hr/>
                     <div className="container">
@@ -19,24 +21,7 @@ class ProjectBoard extends Component {
                                         <h4 className="mb-0">TO DO</h4>
                                     </div>
                                 </div>
-                                <div className="card mb-1 bg-light">
-                                    <div className="card-header text-primary">
-                                        ID: projectSequence
-                                    </div>
-                                    <div className="card-body bg-light">
-                                        <h5 className="card-title">summary</h5>
-                                        <p className="card-text text-truncate ">
-                                            acceptanceCriteria
-                                        </p>
-                                        <a href="" className="btn btn-primary">
-                                            View / Update
-                                        </a>
-
-                                        <button className="btn btn-danger ml-4">
-                                            Delete
-                                        </button>
-                                    </div>
-                                </div>
+                                <AppTaskItem />
                             </div>
                             <div className="col-md-4">
                                 <div className="card text-center mb-2">
